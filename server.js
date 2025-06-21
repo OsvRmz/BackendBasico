@@ -70,7 +70,7 @@ app.delete('/api/persons/:id', (req,res) => {
 
 app.get('/info', (req,res) => {
     const hora = (new Date()).toString();
-    res.send("la agenda tiene información para " + personas.length + " personas <br>" + hora);
+    res.send("la agenda tiene información para " + personas.length + " personas <br>" + hora + "...");
 })
 
 //FIN RUTAS
