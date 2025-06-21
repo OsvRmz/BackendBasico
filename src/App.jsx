@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+const baseURL = '/api/persons'
+
 
 const App = () => {
   const inputName = useRef(null);
@@ -9,7 +11,7 @@ const App = () => {
   const [filtro, setFiltro] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/persons')
+    axios.get(baseURL)
     .then(res => {
       setPersons(res.data);
     })
